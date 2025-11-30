@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="headd" id="welcomemsg">Welcome admin</h1>
+        <input type="search" placeholder="ค้นหาชุมนุม" class="searchinp" onkeyup="search()" id="searchval">
+        <button id="createbtn" onclick="create()">+</button>
+        <button id="logoutbtn" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="scp" id="scp">
+        <div class="cp">
+            <button class="xconfirm" onclick="closescp()">X</button>
+            <h1>เพิ่มชุมนุม</h1>
+            <input id="cinpname" type="text" placeholder="ชื่อชุมนุม">
+            <input id="cinpnum" type="number" placeholder="จำนวนคน">
+            <div id="missingnameornum" style="display: flex; color: red; display: none;">
+                กรุณากรอกชื่อชุมนุมและจำนวนคนให้ครบ</div>
+            <button class="confirmbtn" onclick="confirm()" type="button">Confirm</button>
+        </div>
+    </div>
+
+    <div class="setdeletesure" id="confirmdelete">
+        <div class="deletesure">
+            <h1>คุณแน่ใจไหมที่จะยุบชุมนุม</h1>
+            <h3 id="delcname">Cname</h3>
+            <button onclick="yes()" class="yesbtn">Yes</button>
+            <button onclick="no()" class="nobtn">No</button>
+        </div>
+    </div>
+
+    <div class="setviewpop" id="setviewpop">
+        <div class="viewpop" id="viewok">
+            <button class="closeviewpop" onclick="closeview()">X</button>
+            <h2 id="viewcname">ชุมนุม SIGMA 999</h1>
+            <table id="viewtable">
+                <tr>
+                    <th>Member</th>
+                    <th>Action</th>
+                </tr>
+                
+            </table>
+        </div>
+    </div>
+
+
+    <div class="setplist">
+        <div id="plist">
+
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

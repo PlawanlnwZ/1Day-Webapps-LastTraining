@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    
+    <div class="container">
+        <form class="inform" autocomplete="off">
+            <img src="peak.png" class="peak" alt="">
+            <h1 class="headd">LOGIN</h1>
+            <div>
+                <input type="text" id="user" class="user" placeholder="username" onkeypress="login(event)" autocomplete="off">
+            </div>
+            <div>
+                <input type="password" id="pass" class="pass" placeholder="password" onkeypress="login(event)" autocomplete="new-password">
+            </div>
+            <div class="invalid" style="color: red;font-weight: bold;font-size: 20px; display: none; text-align: center;">Invalid username or password</div>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>
